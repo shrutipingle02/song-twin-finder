@@ -51,40 +51,14 @@ come back as your results.
 
 ---
 
-## Run it locally
-
-```bash
-git clone https://github.com/shrutipingle02/song-twin-finder.git
-cd song-twin-finder
-
-pip install -r requirements.txt
-streamlit run app.py
-```
-
-It opens at `http://localhost:8501`.
-
----
-
-## Files
-
-```
-app.py                    the whole app — recommender and interface
-songs.csv                 81,343 songs, cleaned
-requirements.txt          four packages
-.streamlit/config.toml    dark theme
-```
-
----
 
 ## A note on the results
 
 Matches are based on sound, not meaning. Two songs can share almost identical
-danceability, energy and tempo and still belong to completely different genres —
-so a rock seed can return a drum-and-bass track, and that is the model working as
+danceability, energy and tempo and still belong to completely different genres .
+so a rock seed can return a drum-and-bass track and that is the model working as
 designed rather than a bug.
 
-Nine numbers capture a lot about how a song feels, but not everything. Treat the
-results as a starting point.
 
 ---
 
