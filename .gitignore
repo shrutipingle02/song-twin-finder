@@ -3,3 +3,7 @@ __pycache__/
 *.pyc
 venv/
 .env
+
+# notebook kept local, not published
+*.ipynb
+.ipynb_checkpoints/
