@@ -1,8 +1,10 @@
-#  Song Twin Finder
+# Song Twin Finder
 
 Type a song you love, get five that feel like it.
 
 **Live app → [song-twin-finder.streamlit.app](https://song-twin-finder.streamlit.app)**
+
+![Song Twin Finder](screenshot.png)
 
 ---
 
@@ -55,10 +57,21 @@ come back as your results.
 ## A note on the results
 
 Matches are based on sound, not meaning. Two songs can share almost identical
-danceability, energy and tempo and still belong to completely different genres .
-so a rock seed can return a drum-and-bass track and that is the model working as
-designed rather than a bug.
+danceability, energy and tempo and still belong to completely different genres — so a rock seed can return a
+drum-and-bass track, and that is the model working as designed rather than a bug.
 
+
+---
+
+## Run it locally
+
+```bash
+git clone https://github.com/shrutipingle02/song-twin-finder.git
+cd song-twin-finder
+
+pip install -r requirements.txt
+streamlit run app.py
+```
 
 ---
 
