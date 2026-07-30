@@ -1,4 +1,4 @@
-# 🎧 Song Twin Finder
+#  Song Twin Finder
 
 Type a song you love, get five that feel like it.
 
