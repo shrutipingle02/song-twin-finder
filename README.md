@@ -37,19 +37,16 @@ uses nine of them:
 
 **Three steps:**
 
-**1. Clean the data.** Drop songs with missing values, and remove duplicates —
-the dataset lists the same song once per genre, so without this you get the same
-track five times in your results.
+**1. Clean the data.** Drop missing values and duplicates. The dataset lists each
+song once per genre, so without this the same track appears five times.
 
-**2. Put everything on the same scale.** This is the step that matters most.
-Tempo runs to about 200, while danceability runs 0 to 1. Left alone, a 40 BPM gap
-would count for forty times more than a complete flip in mood, and every
-recommendation would just be "songs at a similar speed". `MinMaxScaler` squashes
-all nine features into 0–1 so each one gets an equal vote.
+**2. Scale everything to 0 to 1.** The step that matters most. Tempo runs to about
+200 while danceability runs 0 to 1, so untouched a 40 BPM gap would outweigh a
+complete flip in mood and every result would just be songs at a similar speed.
+`MinMaxScaler` gives all nine features an equal vote.
 
-**3. Compare.** Each song is now nine numbers — a point in nine-dimensional
-space. Cosine similarity measures how close two points are, and the five closest
-come back as your results.
+**3. Compare.** Each song is now nine numbers, a point in nine-dimensional space.
+Cosine similarity finds the five closest.
 
 ---
 
@@ -57,8 +54,9 @@ come back as your results.
 ## A note on the results
 
 Matches are based on sound, not meaning. Two songs can share almost identical
-danceability, energy and tempo and still belong to completely different genres — so a rock seed can return a
-drum-and-bass track, and that is the model working as designed rather than a bug.
+danceability, energy and tempo yet belong to completely different genres. A rock
+seed can return a drum-and-bass track. That is the model working as designed
+rather than a bug.
 
 
 ---
